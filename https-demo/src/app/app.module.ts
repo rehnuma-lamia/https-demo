@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule }    from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { HttpsService } from './https.service';
-import { CommentService } from './comment.service';
-import { UserPostService } from './user-post.service';
+import { HttpsService } from './services/https.service';
+import { CommentService } from './services/comment.service';
+import { UserPostService } from './services/user-post.service';
    
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
