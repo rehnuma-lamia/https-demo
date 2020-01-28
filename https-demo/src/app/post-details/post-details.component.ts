@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UserPostService } from '../services/user-post.service';
 
 @Component({
   selector: 'app-post-details',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostDetailsComponent implements OnInit {
 
-  constructor() { }
+  singlePost : Observable<any>;
+  constructor(private userPostService:UserPostService) { }
 
   ngOnInit() {
+    this.singlePost = this.userPostService.getPostById("");
   }
 
 }

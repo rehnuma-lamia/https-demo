@@ -1,1 +1,12 @@
-<p>post-details works!</p>
+<div class="container">
+    <h2>Post-Details Page</h2>
+    <ul>
+      <li *ngIf="singlePost !=null"> {{ (singlePost | async) }}>
+        <a [routerLink]="['/details', singlePost.title]"></a>
+      </li>
+    </ul>
+</div>
+ 
+
+
+
