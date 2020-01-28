@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { UserPostService } from '../user-post.service';
+import { UserPostService } from '../services/user-post.service';
 
 @Component({
   selector: 'app-home',
@@ -18,4 +18,5 @@ export class HomeComponent implements OnInit {
     this.listOfUserPosts = this.userPostsService.getUserPosts()
   }
 
+  //goToPostDetails(){}
 }

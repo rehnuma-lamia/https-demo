@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpsService } from '../https.service';
 
 @Component({
   selector: 'app-comments',
@@ -8,9 +7,8 @@ import { HttpsService } from '../https.service';
 })
 export class CommentsComponent implements OnInit {
 
-  constructor(private httpsService: HttpsService) { }
+  constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

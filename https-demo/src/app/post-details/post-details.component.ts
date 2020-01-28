@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpsService } from '../https.service';
+import { Observable } from 'rxjs';
+import { UserPostService } from '../services/user-post.service';
 
 @Component({
   selector: 'app-post-details',
@@ -8,9 +9,11 @@ import { HttpsService } from '../https.service';
 })
 export class PostDetailsComponent implements OnInit {
 
-  constructor(private httpsService: HttpsService) { }
+  singlePost : Observable<any>;
+  constructor(private userPostService:UserPostService) { }
 
   ngOnInit() {
+    this.singlePost = this.userPostService.getPostById("");
   }
 
 }

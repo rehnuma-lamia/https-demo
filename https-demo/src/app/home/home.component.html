@@ -1,6 +1,9 @@
 <div class="container">
-    <h4>Home Page</h4>
-    <div *ngFor = "let post of listOfUserPosts | async"> 
-        {{post | json}} 
+  <h1>Home</h1>
+  <!-- <a routerLink="/details">Post-detail</a> -->
+    <div class="card marginTop10"  *ngFor = "let post of listOfUserPosts | async" >  
+        <h4>{{post.id }}: {{post.title }}</h4>
+        <p> {{post.body}} </p>
     </div>
 </div>
+

@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+h1, h2 {
+    color: #555;
+    font-family: sans-serif;
+}
+
+.container{
+    border: 1px solid #AAA;
+    padding: 10px;
+}
+
+.marginTop10{
+    margin-top: 10px;
+}
