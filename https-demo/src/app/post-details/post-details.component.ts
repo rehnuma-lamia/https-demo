@@ -10,10 +10,13 @@ import { UserPostService } from '../services/user-post.service';
 export class PostDetailsComponent implements OnInit {
 
   singlePost : Observable<any>;
+  listOfPostsByUserId: Observable<any>;
   constructor(private userPostService:UserPostService) { }
 
   ngOnInit() {
-    this.singlePost = this.userPostService.getPostById("");
+    this.singlePost = this.userPostService.getPostById("4");
+    this.listOfPostsByUserId = this.userPostService.getPostByUserId("1");
   }
+  
 
 }
