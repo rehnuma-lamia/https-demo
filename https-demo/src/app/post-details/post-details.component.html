@@ -1,9 +1,6 @@
 <div class="container  marginTop10">
   <h2>Post-Details Page</h2>
   <div *ngIf="singlePost !=null">{{ singlePost | async | json }}</div>
-  <div class="card marginTop10"  *ngFor = "let post of listOfPostsByUserId | async" >  
-    <h4>{{post | json}}</h4>
-  </div>
 </div>
 
 

@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Home</h1>
   <!-- <a routerLink="/details">Post-detail</a> -->
-    <div class="card marginTop10"  *ngFor = "let post of listOfUserPosts | async" >  
+    <div class="card marginTop10"  *ngFor = "let post of listOfUserPosts | async" (click)="goToPostDetails()">  
         <h4>{{post.id }}: {{post.title }}</h4>
         <p> {{post.body}} </p>
     </div>

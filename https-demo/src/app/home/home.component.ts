@@ -12,11 +12,13 @@ export class HomeComponent implements OnInit {
   
   listOfUserPosts: Observable<any>;
 
-  constructor(private userPostsService: UserPostService) { }
+  constructor(private userPostsService: UserPostService, private router: Router) { }
 
   ngOnInit() {
     this.listOfUserPosts = this.userPostsService.getUserPosts()
   }
 
-  //goToPostDetails(){}
+  goToPostDetails(){
+    this.router.navigate(['/details']);
+  }
 }

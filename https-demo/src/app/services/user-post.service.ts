@@ -20,12 +20,5 @@ export class UserPostService {
       return this.httpsService.getItem(Constant.APIURL.postsURL + '/' + postId);
     }
    }
-
-   getPostByUserId(postUserId: string) : Observable<any> {
-    if(postUserId != undefined){
-      let params = new HttpParams().set('userId', postUserId)
-      return this.httpsService.getItem(Constant.APIURL.postsURL, params);
-    }
-  }
    
 }
