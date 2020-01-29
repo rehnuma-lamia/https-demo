@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent},
+  { path: '', component: HomeComponent},
   { path: 'details', component: PostDetailsComponent}
 ];
 

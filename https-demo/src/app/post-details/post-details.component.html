@@ -1,12 +1,11 @@
-<div class="container">
-    <h2>Post-Details Page</h2>
-    <ul>
-      <li *ngIf="singlePost !=null"> {{ (singlePost | async) }}>
-        <a [routerLink]="['/details', singlePost.title]"></a>
-      </li>
-    </ul>
+<div class="container  marginTop10">
+  <h2>Post-Details Page</h2>
+  <div *ngIf="singlePost !=null">{{ singlePost | async | json }}</div>
+  <div class="card marginTop10"  *ngFor = "let post of listOfPostsByUserId | async" >  
+    <h4>{{post | json}}</h4>
+  </div>
 </div>
- 
+
 
 
 
